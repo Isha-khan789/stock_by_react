@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@plugin "daisyui";
+/* plugins: [ require("tailwind-scrollbar-hide") // ...]  */
+@theme {
+  --font-display: "Satoshi", "sans-serif";
+  --background-image: url("/src/assets/back_nav.png");
+  --font-primary: "Poppins", "sans-serif";
+  --font-secondary: "Urbanist", sans-serif;
+}
+/* Hide scrollbar but keep scroll functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
