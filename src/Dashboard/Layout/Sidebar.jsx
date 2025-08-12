@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/Mask group.png";
 import { LuSearchCheck, LuBriefcase } from "react-icons/lu";
@@ -40,6 +40,18 @@ const Sidebar = () => {
       path: "/dashboard/account ",
     },
   ];
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        setIsCollapse(true);
+      } else {
+        setIsCollapse(false);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div
@@ -48,15 +60,16 @@ const Sidebar = () => {
       }`}
     >
       <div className="flex items-center justify-between p-4">
-        {!isCollapse && <img src={logo} alt="Logo" className="h-19 ml-6" />}
+        {!isCollapse && <img src={logo} alt="Logo" className="h-19 ml-6 " />}
+
         <button
           onClick={toggleSidebar}
           className="text-white hover:bg-gray-800 rounded-full p-2"
         >
           {isCollapse ? (
-            <HiOutlineChevronDoubleRight className="w-5 h-5" />
+            <HiOutlineChevronDoubleRight className="w-5 h-5 md:hidden" />
           ) : (
-            <HiOutlineChevronDoubleLeft className="w-5 h-5" />
+            <HiOutlineChevronDoubleLeft className="w-5 h-5  md:hidden" />
           )}
         </button>
       </div>

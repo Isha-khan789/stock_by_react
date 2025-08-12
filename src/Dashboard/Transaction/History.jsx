@@ -5,11 +5,11 @@ import { CiCalendarDate } from "react-icons/ci";
 const History = () => {
   return (
     <div className="flex flex-col mt-7">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center ">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 ">
         <h3 className="font-display text-3xl font-bold text-white ">
           Transactions History
         </h3>
-        <div className="flex flex-row items-center gap-4 max-w-xs w-full">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
           <div className="rounded-2xl relative bg-[#FFFFFF1A]  px-10 py-3 text-[#747681] flex-2 pr-10 text-center">
             Filter
             <TbFilterDown className="absolute left-4  top-1/2  -translate-y-1/2" />
