@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import img from "../../assets/EC.png";
 import { BsFillTriangleFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Trending = () => {
   const Player = {
@@ -11,6 +12,7 @@ const Trending = () => {
   const data = Array(12).fill(Player);
   const [select, setselect] = useState();
   const visibleData = select ? data : data.slice(0, 4);
+  // const [open,setopen]=useState();
 
   return (
     <div className="flex flex-col   justify-between w-full rounded-3xl gap-4 p-6 mt-6 bg-black">
@@ -32,8 +34,9 @@ const Trending = () => {
         } gap-4`}
       >
         {visibleData.map((Player, index) => (
-          <div
+          <Link
             key={index}
+            to="/dashboard/watchlist"
             className="flex flex-col items-center bg-[#1A1A1D] p-4 rounded-xl "
           >
             <img
@@ -48,7 +51,7 @@ const Trending = () => {
               <BsFillTriangleFill className="w-2.5 h-2.5 text-[#2CC884]" />
               <span className="text-sm text-[#2CC884]">{Player.perc}</span>
             </div>
-          </div>
+          </Link>
         ))}
         {/* {data.map((Player, index) => (
          

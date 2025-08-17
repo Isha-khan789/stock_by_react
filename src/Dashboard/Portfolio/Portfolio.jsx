@@ -13,7 +13,6 @@ const Portfolio = () => {
       <Fund />
       <div className="flex flex-col md:flex-row md:items-start gap-4">
         <Refer />
-
         <Deposit />
       </div>
     </div>

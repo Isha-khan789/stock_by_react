@@ -9,8 +9,7 @@ const Login = () => {
   const [showPassword, setshowPassword] = useState(false);
   const navigate = useNavigate();
   const handleSignIn = () => {
-    // Later you will add validation/API call here
-    // For now, it navigates directly to dashboard
+ 
     navigate("/dashboard/portfolio");
   };
 

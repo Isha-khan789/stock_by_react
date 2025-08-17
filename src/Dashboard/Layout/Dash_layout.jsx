@@ -16,4 +16,3 @@ const Dash_layout = () => {
 };
 
 export default Dash_layout;
-//  className="flex min-h-screen bg-[#3A3A3C] overflow-y-auto no-scrollbar h-[calc(100vh-4rem)] p-4

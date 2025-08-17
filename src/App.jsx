@@ -20,6 +20,7 @@ import Portfolio from "./Dashboard/Portfolio/Portfolio.jsx";
 import Explore from "./Dashboard/Explore/Explore.jsx";
 import Account from "./Dashboard/Account setting/account.jsx";
 import Trans from "./Dashboard/Transaction/Trans.jsx";
+import Watchlist from "./Dashboard/Explore/Watchlist.jsx";
 // import index from "./Dashboard/Explore/index.jsx";
 function HomePage() {
   return (
@@ -50,6 +51,7 @@ function App() {
           <Route path="explore" element={<Explore />}></Route>
           <Route path="account" element={<Account />}></Route>
           <Route path="transaction" element={<Trans />}></Route>
+          <Route path="watchlist" element={<Watchlist />} />
         </Route>
       </Routes>
     </BrowserRouter>
