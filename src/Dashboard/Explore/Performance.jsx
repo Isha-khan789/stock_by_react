@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import img from "../../assets/EC.png";
 import { BsFillTriangleFill } from "react-icons/bs";
-
+import { Link } from "react-router-dom";
 const Performance = () => {
   const Player = {
     Image: img,
@@ -33,8 +33,9 @@ const Performance = () => {
         } gap-4`}
       >
         {visibleData.map((Player, index) => (
-          <div
+          <Link
             key={index}
+            to="/dashboard/watchlist"
             className="flex flex-col items-center bg-[#1A1A1D] p-4 rounded-xl "
           >
             <img
@@ -49,7 +50,7 @@ const Performance = () => {
               <BsFillTriangleFill className="w-2.5 h-2.5 text-[#2CC884]" />
               <span className="text-sm text-[#2CC884]">{Player.perc}</span>
             </div>
-          </div>
+          </Link>
         ))}
         {/* {data.map((Player, index) => (
            

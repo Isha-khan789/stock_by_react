@@ -1,6 +1,6 @@
 import React from "react";
 import Fund from "../Portfolio/Fund";
-import Deposit from "../Portfolio/Deposit";
+// import Deposit from "../Portfolio/Deposit";
 import Review from "./Review";
 import List from "./list";
 // import Performance from "./Performance";
@@ -25,5 +25,3 @@ const Watchlist = () => {
 };
 
 export default Watchlist;
-
-
