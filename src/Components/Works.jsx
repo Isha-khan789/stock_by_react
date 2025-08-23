@@ -56,7 +56,7 @@ const Works = () => {
             Why not take advantage of our annual subscription package? Sign up
             today and enjoy all the benefits that come with it for a whole year!
           </p>
-          <button className="bg-white text-green-600 font-medium rounded-full px-6 py-2 flex items-center gap-2 hover:bg-green-100 transition">
+          <button className="bg-white text-[#2CC884FF] font-medium rounded-full px-6 py-2 flex items-center gap-2 hover:bg-green-100 transition">
             Subscribe in $100.00 <FaArrowRight />
           </button>
         </div>
@@ -85,8 +85,9 @@ const Works = () => {
             <h2 className="text-3xl md:text-4xl font-display font-bold">
               How it Works
             </h2>
-            <p className="text-gray-300 text-base font-display md:text-lg mt-3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+            <p className="text-[#8E8E8EFF] text-base font-display md:text-lg mt-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut la{" "}
             </p>
           </div>
 
@@ -96,11 +97,13 @@ const Works = () => {
                 key={index}
                 className="flex flex-col items-center text-center p-4"
               >
-                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-green-500 mb-4">
+                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-[#2CC884FF] mb-4">
                   <img src={item.image} alt={item.title} className="w-8 h-8" />
                 </div>
-                <h3 className="font-semibold mb-2 text-lg">{item.title}</h3>
-                <p className="text-gray-300 text-sm">{item.description}</p>
+                <h3 className=" mb-2 font-bold text-2xl  ">{item.title}</h3>
+                <p className="text-[#8E8E8EFF] font-normal  text-lg">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
